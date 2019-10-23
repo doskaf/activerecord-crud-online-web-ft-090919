@@ -32,9 +32,7 @@ def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
 end
 
 def can_get_the_first_item_in_the_database
-  sql = <<-SQL
-    SELECT * FROM movies ORDER BY id LIMIT 1
-  SQL
+  Movie.first
 end
 
 def can_get_the_last_item_in_the_database
